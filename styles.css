@@ -2,10 +2,6 @@ body {
     padding: 20px;
 }
 
-#trigger {
-    display: none;
-}
-
 .button-container {
     text-align: center;
 }

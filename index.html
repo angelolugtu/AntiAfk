@@ -11,13 +11,14 @@
             <div class="card-body">
                 <h5 id="status" class="card-title">Stopped</h5>
                 <p id="countText" class="card-text">Retriggers: 0</p>
+                
+                <!-- Focus field -->
+                <input type="text" id="trigger" class="form-control" placeholder="Focus Field"/>
 
                 <div class="button-container">
                     <button type="button" class="btn btn-success" onclick="onStartClick()">Start</button>
                     <button type="button" class="btn btn-danger" onclick="onStopClick()">Stop</button>
                 </div>
-                <!-- Invisible button to trigger mouseclick -->
-                <button type="button" id="trigger" class="btn btn-light" onclick="addCount()"></button>
             </div>
         </div>
 

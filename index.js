@@ -8,7 +8,7 @@ function onStartClick() {
     // Prevent double instance of setInterval
     if(currentAction !== 'start') {
         currentAction = 'start';
-        clicker = setInterval(doClick, 30000);
+        clicker = setInterval(doClick, 15000);
     }
 }
 
@@ -20,7 +20,15 @@ function onStopClick() {
 }
   
 function doClick() {
-    document.getElementById('trigger').click();
+    let focusElement = document.getElementById('trigger');
+    
+    addCount();
+
+    if(document.activeElement !== focusElement) {
+        focusElement.focus();
+    } else {
+        focusElement.blur();
+    }
 }
 
 function addCount() {
