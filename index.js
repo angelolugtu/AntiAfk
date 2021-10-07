@@ -8,7 +8,7 @@ function onStartClick() {
     // Prevent double instance of setInterval
     if(currentAction !== 'start') {
         currentAction = 'start';
-        clicker = setInterval(triggerMovement, 1000);
+        clicker = setInterval(triggerMovement, 30000);
     }
 }
 
