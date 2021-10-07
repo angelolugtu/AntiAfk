@@ -8,7 +8,7 @@ function onStartClick() {
     // Prevent double instance of setInterval
     if(currentAction !== 'start') {
         currentAction = 'start';
-        clicker = setInterval(doClick, 30000);
+        clicker = setInterval(triggerMovement, 1000);
     }
 }
 
@@ -19,8 +19,9 @@ function onStopClick() {
     clearInterval(clicker);
 }
   
-function doClick() {
-    document.getElementById('trigger').click();
+function triggerMovement() {
+    document.dispatchEvent(new KeyboardEvent('keypress', {'key': 'a'}))
+    addCount();
 }
 
 function addCount() {
