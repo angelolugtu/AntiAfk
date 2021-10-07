@@ -8,7 +8,7 @@ function onStartClick() {
     // Prevent double instance of setInterval
     if(currentAction !== 'start') {
         currentAction = 'start';
-        clicker = setInterval(doClick, 1000);
+        clicker = setInterval(doClick, 30000);
     }
 }
 
